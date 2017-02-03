@@ -114,7 +114,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("/assets/img/flur_clear.png");
+    background-image: url("assets/img/flur_clear.png");
     background-size: 120px 120px;
     background-repeat: repeat;
     background-color: rgba(0,0,0,.1);
@@ -132,7 +132,7 @@ footer {
 }*/
 
 .photo-mat {
-  background-image: url(/assets/img/polaroid.jpg);
+  background-image: url(assets/img/polaroid.jpg);
   background-position: -5px 0px;
   background-size: 240px;
   text-align: center;
