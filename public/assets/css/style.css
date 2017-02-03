@@ -1,0 +1,211 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-image: linear-gradient( 180deg, #b96ae0, #b359e0 );
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.3em;
+  margin: .5em
+}
+
+h3 {
+  line-height: 1.2em;
+  font-size: 14px;
+  padding: 1em;
+  letter-spacing:.6px;
+  font-weight: 100;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  list-style: none;
+  padding: 8px;
+}
+
+#flur-label-container {
+  padding: 30px;
+  padding-left: 60px;
+}
+
+#flur-label {
+  width: 5em;
+}
+
+div, #thankyou-text {
+  font-size: 16px;
+  color: rgb(212, 207, 207);
+  font-family: 'Nunito', 'Open Sans';
+  font-weight: 100;
+}
+
+#thankyou-text h1 {
+  color: whitesmoke;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+  color: rgba(132, 103, 103, 0.57);
+  font-size: .8em;
+  font-family: 'Nunito', 'Open Sans';
+}
+
+#thankyou-text {
+    position: absolute;
+    top: calc(50% + 10em);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#flur-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#flur-icon-container:hover {
+  cursor: pointer;
+}
+
+#flur-icon {
+  width:16em;
+}
+
+#thanksfor, #thememories {
+  font-family: "Permanent Marker";
+  font-size: 28px;
+}
+
+.slide-box {
+	display:block;
+	height: 100%;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+#photo-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#photo-box {
+  height: 100%;
+  position: relative;
+}
+
+#photo-box:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("/assets/img/flur_clear.png");
+    background-size: 120px 120px;
+    background-repeat: repeat;
+    background-color: rgba(0,0,0,.1);
+    animation: animatedBackground 40s linear infinite;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background-color: white;
+}
+
+/*@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -1000px -1000px }
+}*/
+
+.photo-mat {
+  background-image: url(/assets/img/polaroid.jpg);
+  background-position: -5px 0px;
+  background-size: 240px;
+  text-align: center;
+  border-radius: 3px;
+  width: 200px;
+  height: 260px;
+  /* background: whitesmoke; */
+  padding: 15px;
+  padding-bottom: 0px;
+  margin: 40px;
+  display: inline-table;
+  position: relative;
+}
+
+.sideways-photo {
+	position: absolute;
+	image-orientation: from-image;
+	max-width: 100%;
+	transform: matrix3d;
+	transform: scale(2) rotate(90deg) translateY(41px) translateX(39px);
+	clip: rect(49px,143px,156px,33px);
+}
+
+.photo-link {
+  color: gray;
+  text-decoration: none;
+}
+
+.textalign-left {
+  text-align: left;
+}
+
+.photo-mat-bottom-text {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  left: 20px;
+  right: 20px;
+}
+
+.text-platform {
+  font-family: "Permanent Marker";
+  text-align: center;
+}
+
+@media screen and (max-width : 736px) {
+	#flur-icon-container {
+		top: 35%;
+	}
+	#flur-icon {
+	  width: 12em;
+	}
+	#flur-label-container {
+		padding:1.5em;
+	}
+	#thankyou-text {
+		left: unset;
+		transform: unset;
+		text-align:center;
+		padding-right:1.2em;
+		padding-left: 1.2em;
+		top: calc(35% + 10em);
+	}
+	h1 {
+		padding-left: 2.4em;
+		padding-right: 2.4em;
+	}
+	h3 {
+		margin-top:2.5em;
+		padding-left:2em;
+		padding-right:2em;
+		font-weight:bolder;
+		font-size: 1em;
+		text-align: left
+	}
+}
