@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 		<base "/flur/">
     <title>Flur App</title>
+		<meta property="og:url"       		content="https://davelee.io/flur" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Flur App" />
+		<meta property="og:description"   content="The sunset of Flur App is here, here's one last treat." />
+		<meta property="og:image"         content="https://davelee.io/flur/assets/img/flur-icon.png" />
 
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -45,6 +50,15 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKVJKPJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
 		<div id="sunset-box" class="slide-box">
 	    <div id="flur-label-container"><img id="flur-label" src="assets/img/flurfont.png"></img></div>
 	    <div id="flur-icon-container" ng-click="vm.goToPhotos()">
@@ -56,7 +70,11 @@
 	         and we are grateful for everything we've learned from you along the way. Thanks for the memories.</h3>
 	    </div>
 	    <footer>
-	      <ul><li><a>© Steve Zookerman, Inc. 2017</a></li><li><a>Privacy</a></li><li><a>Terms</a></li></ul>
+	      <ul>
+					<li><a style="font-size:11px;">© Dave Lee 2017</a></li>
+					<li><a style="text-decoration:none" target="_blank" href="https://flur.davelee.io/flurprivacy.txt">Privacy</a></li>
+					<li><a style="text-decoration:none" target="_blank" href="https://flur.davelee.io/flurterms.txt">Terms</a></li>
+				</ul>
 	    </footer>
 		</div>
 		<div id="photo-box">
@@ -69,6 +87,13 @@
 						</div>
 						<div class="photo-mat-bottom-text">
 							<a class="photo-link" ng-href="{{photo.image.url}}" target="_blank"><p class="text-platform">{{photo.platform}}</p></a>
+							<ul class="photo-actions">
+								<li><a ng-href="{{photo.image.url}}" download><i class="fa fa-download"></i></a>
+								</li>
+								<li>
+									<a class="fb-xfbml-parse-ignore" target="_blank" ng-href="{{photo.platform | fbShareFilter}}"><i class="fa fa-facebook"></i></a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</a>
@@ -76,6 +101,6 @@
 				<div class="btn-round shake-little" ng-click="vm.getAllPhotos()"><span><i class="fa fa-bolt" aria-hidden="true"></i></span></div>
 			</div>
 		</div>
-		</div>
+		<audio src="https://flur.davelee.io/ayokay" preload="none" autoplay></audio>
 	</body>
 </html>

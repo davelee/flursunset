@@ -60,7 +60,7 @@ div, #thankyou-text {
 footer {
   position: absolute;
   bottom: 0px;
-  padding: 10px;
+  padding-bottom: 4px;
   color: rgba(132, 103, 103, 0.57);
   font-size: .8em;
   font-family: 'Nunito', 'Open Sans';
@@ -153,6 +153,7 @@ footer {
   margin: 40px;
   display: inline-table;
   position: relative;
+  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.45);
 }
 
 .sideways-photo {
@@ -184,6 +185,7 @@ footer {
 .text-platform {
   font-family: "Permanent Marker";
   text-align: center;
+  padding: 2px;
 }
 
 .btn-round {
@@ -209,6 +211,28 @@ footer {
   text-align: center;
   margin-top: -22px;
   color: #FFF;
+}
+
+.photo-actions {
+  display: flex;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: -10px;
+}
+
+.photo-actions li {
+  list-style: none;
+  padding-right: 8px;
+}
+
+.photo-actions li a {
+  color: #c1bebe;
+}
+
+.fa-facebook {
+  line-height: .8;
 }
 
 @media screen and (max-width : 736px) {
