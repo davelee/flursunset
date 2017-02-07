@@ -7,14 +7,16 @@
 
   .filter('fbShareFilter', function () {
     return function (path) {
-      return "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavelee.io%2Fflur%23photo-box%3FshareId%3D" + path + "&amp;src=sdkpreparse";
+      return "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavelee.io%2Fflur%3FshareId%3D" + path + "%23photo-box" + "&amp;src=sdkpreparse";
     };
+  })
+
+  .config(function($locationProvider) {
+    $locationProvider.html5Mode(true);
   });
 
 	function PhotoController ($scope, $location) {
-
     var vm = this;
-
     var share_id = $location.search().shareId;
 
     vm.goToPhotos = function () {
